@@ -175,6 +175,7 @@ def sizeof_fmt(num):
         unit, num_decimals = unit_list[exponent]
         format_string = '{:.%sf} {}' % (num_decimals)
         return format_string.format(quotient, unit)
+        return str(quotient) + unit #TODO
     elif num == 0:
         return '0 bytes'
     elif num == 1:
